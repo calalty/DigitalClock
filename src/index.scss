@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #010101;
+}
+
+.container {
+    justify-content: center;
+    align-content: center;
+    display: grid;
+}
+
+.toggle {
+    margin-top: 2.5rem;
+    color: white;
+
+    &__items {
+        background-color:#282827;
+        min-width: 50vw;
+        padding: 0.5rem;
+        border-radius: 7.5px;
+
+        .time {
+            float: right;
+        }
+    }
+
+    &__switch {
+        position: relative;
+        width: 40px;
+        height: 20px;
+        float: right;
+
+        input {
+            display: none;
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+    }
+
+    &__switch 
+    &__slider:before {
+        position: absolute;
+        content: "";
+        height: 17px;
+        width: 17px;
+        bottom: 1.5px;
+        left: 1.5px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50px;
+    }
+
+    input:checked + &__slider {
+        background-color:#5cbf73;
+    }
+    
+    
+    input:checked + &__slider::before {
+        transform: translateX(20px);
+    }
+    
+    
+}
+
+#timezones {
+    margin-top: 2.5rem;
+    min-width: 50vw;
+    background-color: #282827;
+    border-radius: 7.5px;
+    padding: 0.5rem;
+    color: white;
+    border: 0px;
+}
+
+.clock {
+    margin-top: 5rem;
+    &__time {
+        color: white;
+        background-color: #282827;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1.5rem;
+        font-family: 'Orbitron', sans-serif;
+        letter-spacing: 0.25rem;
+    }
+}

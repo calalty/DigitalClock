@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #010101;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 15vh;
+  color: white;
+}
+.toggle__items {
+  background-color: #282827;
+  min-width: 50vw;
+  padding: 0.5rem;
+  border-radius: 7.5px;
+}
+.toggle__items .time {
+  float: right;
+}
+
+.timezones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#timezones {
+  min-width: 50vw;
+  background-color: #282827;
+  border-radius: 7.5px;
+  padding: 0.5rem;
+  color: white;
+  border: 0px;
+}
+
+.clock {
+  min-height: 20vh;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+}
+.clock__time {
+  color: white;
+  background-color: #282827;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.25rem;
+}
+
+.switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  float: right;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  bottom: 1.5px;
+  left: 1.5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+input:checked + .slider {
+  background-color: #5cbf73;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/*# sourceMappingURL=/src.80ee2152.css.map */

@@ -1,0 +1,98 @@
+@import "https://fonts.googleapis.com/css2?family=Orbitron&display=swap";
+*, :before, :after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #010101;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  place-content: center;
+  display: grid;
+}
+
+.toggle {
+  color: #fff;
+  margin-top: 2.5rem;
+}
+
+.toggle__items {
+  min-width: 50vw;
+  background-color: #282827;
+  border-radius: 7.5px;
+  padding: .5rem;
+}
+
+.toggle__items .time {
+  float: right;
+}
+
+.toggle__switch {
+  width: 40px;
+  height: 20px;
+  float: right;
+  position: relative;
+}
+
+.toggle__switch input {
+  display: none;
+}
+
+.toggle__slider {
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: all .4s;
+  position: absolute;
+  inset: 0;
+}
+
+.toggle__switch .toggle__slider:before {
+  content: "";
+  height: 17px;
+  width: 17px;
+  background-color: #fff;
+  border-radius: 50px;
+  transition: all .4s;
+  position: absolute;
+  bottom: 1.5px;
+  left: 1.5px;
+}
+
+input:checked + .toggle__slider {
+  background-color: #5cbf73;
+}
+
+input:checked + .toggle__slider:before {
+  transform: translateX(20px);
+}
+
+#timezones {
+  min-width: 50vw;
+  color: #fff;
+  background-color: #282827;
+  border: 0;
+  border-radius: 7.5px;
+  margin-top: 2.5rem;
+  padding: .5rem;
+}
+
+.clock {
+  margin-top: 5rem;
+}
+
+.clock__time {
+  color: #fff;
+  letter-spacing: .25rem;
+  background-color: #282827;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Orbitron, sans-serif;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=index.ce1d6491.css.map */
